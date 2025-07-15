@@ -1,0 +1,1 @@
+x2 = "value for .tfvars"

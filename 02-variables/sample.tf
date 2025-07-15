@@ -57,3 +57,5 @@ output "list_value1" {
 output "map_name" {
   value = var.map["course"]
 }
+## get value from terraform.tfvars
+variable "x2" {}
