@@ -66,6 +66,12 @@ output "x2" {
 ## dev.tfvars or prod.tfvars --> value should be explicitly passed with -var-file from cli
 # value will provide dev.tfvars file
 variable "x3" {}
+output "x3" {
+  value = "value of x3 dev is ${var.x3}"
+}
 
 # value will provide prod.tfvars file
 variable "x3_env" {}
+output "x3_env" {
+  value = "value of x3_env is ${var.x3_env}"
+}
