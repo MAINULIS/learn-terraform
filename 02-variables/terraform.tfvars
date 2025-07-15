@@ -1,1 +1,1 @@
-x2 = "value for .tfvars"
+x2 = "value form .tfvars"

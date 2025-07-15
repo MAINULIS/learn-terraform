@@ -57,9 +57,15 @@ output "list_value1" {
 output "map_name" {
   value = var.map["course"]
 }
-## get value from terraform.tfvars
+## get value from terraform.tfvars --> the value will be picked automatically
 variable "x2" {}
 
 output "x2" {
   value = "value of x2 is ${var.x2}"
 }
+## dev.tfvars or prod.tfvars --> value should be explicitly passed with -var-file from cli
+# value will provide dev.tfvars file
+variable "x3" {}
+
+# value will provide prod.tfvars file
+variable "x3_env" {}
