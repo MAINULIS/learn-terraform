@@ -59,3 +59,7 @@ output "map_name" {
 }
 ## get value from terraform.tfvars
 variable "x2" {}
+
+output "x2" {
+  value = "value of x2 is ${var.x2}"
+}
