@@ -75,3 +75,9 @@ variable "x3_env" {}
 output "x3_env" {
   value = "value of x3_env is ${var.x3_env}"
 }
+## File name has to be different, but the file needs to be loaded automatically, then auto.tfvars
+variable "x4" {}
+
+output "x4" {
+  value = "Value of x4 is ${var.x4}"
+}
