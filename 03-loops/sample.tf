@@ -9,6 +9,7 @@ provider "aws" {}
 # }
 
 variable "instances" {
+  # caution: if you change or alter the index number, instances will be create again
   default = ["frontend","catalogue" ]
 }
 resource "aws_instance" "web" {

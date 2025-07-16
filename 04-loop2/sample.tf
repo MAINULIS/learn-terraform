@@ -1,6 +1,7 @@
 provider "aws" {}
 
 variable "instances" {
+  # this is safest way. if you change the order and then do terraform init it will show no changes
   default = {
     frontend = {
       instance_type = "t3.micro"
