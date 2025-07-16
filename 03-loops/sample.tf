@@ -3,6 +3,10 @@ resource "null_resource" "dummy" {
 }
 
 provider "aws" {}
+# to get Serial Number before the instances
+# tags = {
+#   Name = "web-${count.index +1}"
+# }
 
 variable "instances" {
   default = ["frontend","catalogue" ]

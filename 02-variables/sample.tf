@@ -63,7 +63,7 @@ variable "x2" {}
 output "x2" {
   value = "value of x2 is ${var.x2}"
 }
-## dev.tfvars or prod.tfvars --> value should be explicitly passed with -var-file from cli
+## dev.tfvars or prod.tfvars --> value should be explicitly passed with -var-file variable_file_name(dev.tfvars/prod.tfvars) from cli
 # value will provide dev.tfvars file
 variable "x3" {}
 output "x3" {
