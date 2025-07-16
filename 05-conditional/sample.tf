@@ -8,3 +8,14 @@ resource "aws_instance" "web" {
 }
 
 variable "instance_type" {}
+
+## Conditionals
+# String --> ==, !=
+# Numbers --> ==, !=, <, <=, > , >=, ==
+# boolean (var.boolean ? true_value : false_value)
+
+## conditional can also be used to determine whether to create a resource or not
+resource "null_resource" "test" {
+  count = var.input == "" ? 0 : 1
+}
+variable "input" {}
