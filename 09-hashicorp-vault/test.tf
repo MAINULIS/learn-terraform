@@ -1,4 +1,4 @@
-data "vault_generic_secret" "rundeck_auth" {
+data "vault_generic_secret" "sample" {
   path = "kv/demo"
 }
 
@@ -16,4 +16,9 @@ variable "token" {}
 output "secret" {
   value = data.vault_generic_secret.sample
   sensitive = true
+}
+
+resource "local_file" "foo" {
+  content  = data.vault_generic_secret.sample.data_json
+  filename = "/tem/secret"
 }
