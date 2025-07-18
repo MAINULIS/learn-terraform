@@ -12,3 +12,8 @@ provider "vault" {
 }
 
 variable "token" {}
+
+output "secret" {
+  value = data.vault_generic_secret.sample
+  sensitive = true
+}
