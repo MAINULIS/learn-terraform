@@ -20,5 +20,5 @@ output "secret" {
 
 resource "local_file" "foo" {
   content  = data.vault_generic_secret.sample.data_json
-  filename = "/tem/secret"
+  filename = "/tmp/secret"
 }
